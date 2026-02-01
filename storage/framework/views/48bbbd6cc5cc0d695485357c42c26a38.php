@@ -171,7 +171,7 @@
 
             <?php if(auth()->guard()->guest()): ?>
 
-                <a class="navbar-brand" href="<?php echo e(url('/')); ?>">Dulce Contigo</a>
+                <a class="navbar-brand" href="<?php echo e(url('/')); ?>">Dulce Contigo.</a>
             <?php endif; ?>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
