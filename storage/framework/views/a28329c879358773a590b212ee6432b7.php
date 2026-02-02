@@ -87,7 +87,7 @@
 </style>
 <div class="container">
     <h2 style="text-align: center; color:#15401b; margin-top: 18px;">
-        Estos son nuestros deliciosos <?php echo e($categoria->nombre); ?>
+         <?php echo e($categoria->nombre); ?>
 
     </h2>
     <a href="<?php echo e(url('/')); ?>" class="btn btn-outline-dark">Volver al catálogo</a>

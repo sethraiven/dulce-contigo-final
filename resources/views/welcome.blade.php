@@ -301,7 +301,7 @@ footer {
 <body>
 
     <div class="container mt-4">
-          <h2 class="section-title text-center mb-2 mt-2 text-success">Nuestro Catálogo</h2>
+          <h2 class="section-title text-center mb-2 mt-2 text-success">Te acompañamos en tus ideas y construcciones</h2>
 
     <div id="categoriasCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -309,14 +309,24 @@ footer {
                 $imagenes = [
                     'Postres'=>'https://0701.static.prezi.com/preview/v2/otksijunl3nhsozxhpzd4w3jnx6jc3sachvcdoaizecfr3dnitcq_3_0.png',
                     'Conservas'=>'https://www.farmaceuticosdesevilla.es/consejossaludables/wp-content/uploads/sites/3/2022/03/1450119467-fotolia_70795211_subscription_xxl.jpg',
-                    'Dulces'=>'https://m.media-amazon.com/images/I/714NzgGcudL.SL1500.jpg',
+                    'otros'=>'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQglHOIm8nCfAhle733e6qyg3Wn_MHfR3PKPw&s',
+                    
+                    'ferretería'=>'https://www.bocelujosla86.com/cdn/shop/collections/Ferreteria.jpg?v=1593555968',
+
+                    
                     //agregar nombre y url para mas categorias
         ];
             @endphp
 
+            @php
+                $imagenes = array_merge($imagenes, [
+                    'Ferretería' => 'https://images.unsplash.com/photo-1562607503-461baf23b79b?w=1200&h=600&fit=crop'
+                ]);
+            @endphp
+
             @foreach ($categorias as $index => $categoria)
                 <div class="carousel-item @if($index == 0) active @endif">
-                    <div class="d-flex justify-content-center align-items-center flex-column" style="height: 500px;">
+                    <div class="d-flex justify-content-center align-items-center flex-column" stjpgyle="height: 500px;">
 
                         <img src="{{ $imagenes[$categoria->nombre] ?? 'https://via.placeholder.com' }}" class="" alt="{{ $categoria->nombre }}"
                         style="height: 400px; width:960px">
@@ -353,14 +363,14 @@ footer {
 <!-- Galería de Productos -->
 <section class="py-5">
   <div class="container">
-    <h2 class="section-title text-center text-success mt-2 ">Nuestros Postres Estrella</h2>
+    <h2 class="section-title text-center text-success mt-2 ">Productos de calidad</h2>
     <div class="row mt-4">
       <div class="col-md-4 mb-4">
         <div class="card h-100 shadow-sm">
-          <a href="{{ route('categorias.producto', 1) }}"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/66/f1/66/las-fronteras-no-son.jpg?w=800&h=-1&s=1"class="card-img-top" alt="Cheesecake"></a>
+          <a href="{{ route('categorias.producto', 1) }}"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE65isew8FyqXBfCJns4fW4OIcTAZKqyjlFQ&s"class="card-img-top" alt="Cheesecake"></a>
           <div class="card-body">
-            <h5 class="card-title">Nutella</h5>
-            <p class="card-text">Suave, cremoso y con el toque del chocolate. Un favorito de todos.</p>
+            <h5 class="card-title">Herraminetas </h5>
+            <p class="card-text">Todo lo que necesitas para tu hogar.</p>
           </div>
         </div>
       </div>
@@ -481,8 +491,10 @@ footer {
         <h2 class="section-title text-center text-success mt-2 ">¡VISITANOS!</h2>
         <br>
         <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15056.25382040731!2d-75.3812491455579!3d6.130658046120886!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e469f25f355a473%3A0xf27e907f9adde2f1!2sDulce%20Contigo!5e0!3m2!1ses!2sus!4v1713989889494!5m2!1ses!2sus"
-            frameborder="0" class="mapa1"></iframe>
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.8532678911404!2d-75.4889415!3d6.0950186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e413f5e5e5e5e5e%3A0x0!2sKilometro%2028%20Via%20Las%20Palmas!5e0!3m2!1ses!2sco!4v1706812345678"
+            frameborder="0" class="mapa1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+           
     </div>
 </section>
 </div> <!-- Esta cierra el último .container -->
@@ -494,22 +506,22 @@ footer {
             <p><i class="fa fa-envelope"></i> hola@dulcecontigo.com</p>
             <a href="https://api.whatsapp.com/send?phone=573246283231&text=Hola%20%F0%9F%91%8B%20Miguelucho" target="_blank"><i class="fab fa-whatsapp"></i> whatsapp</a>
         </div>
-        <div class="footer-section">
+        {{-- <div class="footer-section">
             <h3>Síguenos</h3>
             <a href="https://web.facebook.com/dulcecontigopostres/?_rdc=1&_rdr" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
             <a href="https://www.tiktok.com/@dulcecontigo" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
             <a href="https://www.instagram.com/dulcecontigo/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-        </div>
+        </div> --}}
         <div class="footer-section">
             <h3>Información</h3>
-            <a href="https://surl.li/vnucdw" target="_blank"><i class="far fa-handshake"></i> Trabaja con nosotros</a>
-            <p><i class="fas fa-clock"></i> Lunes a Viernes: 11:00 AM - 7:00 PM </p>
-            <p><i class="fas fa-clock"></i> Sábado, Domingo y festivos: 11:00 AM - 8:30 PM</p>
-            <a href="https://drive.google.com/file/d/1VUjYkU_C-3xWxrIldJVCH6PQ7ztVPoCK/view" target="_blank"><i class="fab fa fa-clone"></i> Política y tratamiento de datos</a>
+            {{-- <a href="https://surl.li/vnucdw" target="_blank"><i class="far fa-handshake"></i> Trabaja con nosotros</a> --}}
+            <p><i class="fas fa-clock"></i> Lunes a Viernes: 7:30 AM - 6:00 PM </p>
+            <p><i class="fas fa-clock"></i> Sábado 8:00 AM - 12:30 PM</p>
+            {{-- <a href="https://drive.google.com/file/d/1VUjYkU_C-3xWxrIldJVCH6PQ7ztVPoCK/view" target="_blank"><i class="fab fa fa-clone"></i> Política y tratamiento de datos</a> --}}
         </div>
     </div>
     <div class="footer-bottom">
-        &copy; 2025. Todos los derechos reservados.
+        &copy; 2026. Todos los derechos reservados.
     </div>
 </footer>
 

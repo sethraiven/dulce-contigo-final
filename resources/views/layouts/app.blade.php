@@ -171,7 +171,7 @@
 
             @guest
 
-                <a class="navbar-brand" href="{{ url('/') }}">Dulce Contigo.</a>
+                <a class="navbar-brand" href="{{ url('/') }}">FERRYCOLORES RH</a>
             @endguest
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -197,9 +197,11 @@
                                 Productos
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownProductos">
-                                <li><a class="dropdown-item" href="{{ route('categorias.producto', 1) }}">Postres</a></li>
-                                <li><a class="dropdown-item" href="{{ route('categorias.producto', 4) }}">Dulces</a></li>
-                                <li><a class="dropdown-item" href="{{ route('categorias.producto', 2) }}">Conservas</a></li>
+                                <li><a class="dropdown-item" href="{{ route('categorias.producto', 1) }}">Ferreteria</a></li>
+                                
+                                <li><a class="dropdown-item" href="{{ route('categorias.producto', 2) }}">Material de playa</a></li>
+
+                                <li><a class="dropdown-item" href="{{ route('categorias.producto', 4) }}">Otros</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">

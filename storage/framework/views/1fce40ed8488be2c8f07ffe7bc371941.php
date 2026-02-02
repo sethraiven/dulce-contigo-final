@@ -156,7 +156,7 @@
                     </div>
                     <div class="d-flex align-items-center gap-2 mx-3">
                         <button onclick="cambiarCantidad(${idx}, -1)" class="btn btn-outline-secondary btn-sm carrito-btn-cantidad">−</button>
-                        <span style="min-width:32px; text-align:center; font-size:1.1rem;">${prod.cantidad}</span>
+                        <input type="number" id="cantidad-${idx}" value="${prod.cantidad}" min="1" max="9999" class="form-control" style="width:85px; text-align:center; font-size:1rem;" onchange="actualizarCantidad(${idx}, this.value)">
                         <button onclick="cambiarCantidad(${idx}, 1)" class="btn btn-outline-secondary btn-sm carrito-btn-cantidad">+</button>
                     </div>
                     <div class="text-end ms-3" style="width:100px;">
@@ -184,6 +184,24 @@
             carrito[idx].cantidad += cambio;
             if (carrito[idx].cantidad < 1) {
                 carrito[idx].cantidad = 1;
+            }
+            localStorage.setItem('carrito', JSON.stringify(carrito));
+            mostrarCarrito();
+            if (window.actualizarContadorCarrito) window.actualizarContadorCarrito();
+        }
+    }
+
+    function actualizarCantidad(idx, nuevaCantidad) {
+        const cantidad = parseInt(nuevaCantidad);
+        if (carrito[idx]) {
+            if (cantidad < 1) {
+                carrito[idx].cantidad = 1;
+                document.getElementById(`cantidad-${idx}`).value = 1;
+            } else if (cantidad > 9999) {
+                carrito[idx].cantidad = 9999;
+                document.getElementById(`cantidad-${idx}`).value = 9999;
+            } else {
+                carrito[idx].cantidad = cantidad;
             }
             localStorage.setItem('carrito', JSON.stringify(carrito));
             mostrarCarrito();

@@ -13,6 +13,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        // Ejecutar el seeder de categorías primero
+        $this->call(CategoriaSeeder::class);
+
         // User::factory(10)->create();
 
         User::factory()->create([
