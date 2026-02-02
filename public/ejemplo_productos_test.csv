@@ -1,0 +1,9 @@
+nombre,descripcion,precio,stock,categoria_id
+Chocolate Belga,Chocolate premium importado de Bélgica,12.50,50,1
+Galletas Integrales,Galletas con granos integrales,3.99,100,2
+Tarta de Manzana,Tarta casera con manzana fresca,9.99,30,3
+Macarrones de Almendra,Macarrones franceses dulces,7.50,25,2
+Caramelos de Frutas,Caramelos artesanales de frutas,4.50,150,1
+Donas de Vainilla,Donas frescas con glaseado,3.75,80,2
+Brownies Intenso,Brownies de chocolate intenso,5.99,60,1
+Flan Casero,Flan cremoso casero,6.50,40,3

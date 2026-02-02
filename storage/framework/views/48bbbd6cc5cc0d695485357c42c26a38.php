@@ -33,8 +33,60 @@
             border-radius: 100px;
         }
 
+         <style>
+        .banner-productos {
+            background: linear-gradient(135deg, #15401b 0%, #2d7a38 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-bottom: 30px;
+            border-radius: 0;
+            box-shadow: 0 4px 12px rgba(21, 64, 27, 0.2);
+        }
+
+        .banner-productos h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: 0.05em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .banner-productos p {
+            font-size: 1.1rem;
+            margin: 10px 0 0 0;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+    <style>
+        .banner-productos {
+            background: linear-gradient(135deg, #15401b 0%, #2d7a38 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-bottom: 30px;
+            border-radius: 0;
+            box-shadow: 0 4px 12px rgba(21, 64, 27, 0.2);
+        }
+
+        .banner-productos h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: 0.05em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .banner-productos p {
+            font-size: 1.1rem;
+            margin: 10px 0 0 0;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+    
+
         .navbar {
-            background: linear-gradient(90deg, rgb(15, 46, 27), rgb(20, 65, 38), rgb(18, 56, 32));
+           background: linear-gradient(135deg, #15401b 0%, #2d7a38 100%); rgb(18, 56, 32));
             box-shadow: 0 4px 6px rgba(21, 64, 27, 0.15);
         }
 
@@ -160,14 +212,14 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a href="<?php echo e(url('/pedidos')); ?>" class="logo d-flex align-items-center" style="text-decoration: none">
-                <img src="https://media-cdn.tripadvisor.com/media/photo-s/19/a2/1c/a6/dulcecontigo.jpg" alt="">
+                <img style="width: 100px; height: 100px; object-fit: cover; margin-right: 20px;" src="<?php echo e(asset('imagenes/logo.jpg')); ?>" alt="" >
                 <?php if(auth()->guard()->check()): ?>
+                
                     <span class="ms-3 fw-bold text-white" style="font-size:1.1rem;"> Bienvenido:
                         <?php echo e(Auth::user()->name); ?>.
                     </span>
                 <?php endif; ?>
             </a>
-
 
             <?php if(auth()->guard()->guest()): ?>
 

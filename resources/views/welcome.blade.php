@@ -303,6 +303,8 @@ footer {
     <div class="container mt-4">
           <h2 class="section-title text-center mb-2 mt-2 text-success">Te acompañamos en tus ideas y construcciones</h2>
 
+{{-- carrusel de imagenes --}}
+
     <div id="categoriasCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           @php
@@ -313,7 +315,6 @@ footer {
                     
                     'ferretería'=>'https://www.bocelujosla86.com/cdn/shop/collections/Ferreteria.jpg?v=1593555968',
 
-                    
                     //agregar nombre y url para mas categorias
         ];
             @endphp
@@ -490,6 +491,7 @@ footer {
     <div class="container">
         <h2 class="section-title text-center text-success mt-2 ">¡VISITANOS!</h2>
         <br>
+        <center><p><i class="fas fa-map-marker-alt"></i> KILOMETRO 28 VIA LAS PALMAS SECTOR LA FE </p></center>
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.8532678911404!2d-75.4889415!3d6.0950186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e413f5e5e5e5e5e%3A0x0!2sKilometro%2028%20Via%20Las%20Palmas!5e0!3m2!1ses!2sco!4v1706812345678"
             frameborder="0" class="mapa1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -503,8 +505,8 @@ footer {
     <div class="footer-content" id="contacto">
         <div class="footer-section">
             <h3>Contacto</h3>
-            <p><i class="fa fa-envelope"></i> hola@dulcecontigo.com</p>
-            <a href="https://api.whatsapp.com/send?phone=573246283231&text=Hola%20%F0%9F%91%8B%20Miguelucho" target="_blank"><i class="fab fa-whatsapp"></i> whatsapp</a>
+            <p><i class="fa fa-envelope"></i> ferrycoloresrh@gmail.com </p>
+            <a href="https://api.whatsapp.com/send?phone=573246283231&text=Hola%20%F0%9F%91%8B%20Miguelucho" target="_blank"><i class="fab fa-whatsapp"></i> whatsapp 3104393143</a>
         </div>
         {{-- <div class="footer-section">
             <h3>Síguenos</h3>
@@ -517,6 +519,7 @@ footer {
             {{-- <a href="https://surl.li/vnucdw" target="_blank"><i class="far fa-handshake"></i> Trabaja con nosotros</a> --}}
             <p><i class="fas fa-clock"></i> Lunes a Viernes: 7:30 AM - 6:00 PM </p>
             <p><i class="fas fa-clock"></i> Sábado 8:00 AM - 12:30 PM</p>
+            
             {{-- <a href="https://drive.google.com/file/d/1VUjYkU_C-3xWxrIldJVCH6PQ7ztVPoCK/view" target="_blank"><i class="fab fa fa-clone"></i> Política y tratamiento de datos</a> --}}
         </div>
     </div>

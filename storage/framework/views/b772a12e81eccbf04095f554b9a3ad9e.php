@@ -1,11 +1,48 @@
 <?php $__env->startSection('content'); ?>
+    <style>
+        .banner-productos {
+            background: linear-gradient(135deg, #15401b 0%, #2d7a38 100%);
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            margin-bottom: 15px;
+            border-radius: 0;
+            box-shadow: 0 4px 12px rgba(21, 64, 27, 0.2);
+        }
+
+        .banner-productos h1 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: 0.05em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .banner-productos p {
+            font-size: 0.75rem;
+            margin: 3px 0 0 0;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+    </style>
+
+    <div class="banner-productos">
+        <h1><i class="fa fa-cubes"></i> Catálogo de Productos</h1>
+        <p>Gestiona y organiza tu inventario</p>
+    </div>
+
     <div class="container">
-        <h1 style="text-align: center">Lista de Productos</h1>
         <?php if(auth()->guard()->check()): ?>
-            <a href="#" class="btn btn-outline-dark mb-3" style="font-weight:600; border-radius: 1.5rem;"
-                data-bs-toggle="modal" data-bs-target="#crearProductoModal">
-                <i class="fa fa-plus"></i> Agregar Nuevo Producto
-            </a>
+            <div class="mb-3">
+                <a href="#" class="btn btn-outline-dark" style="font-weight:600; border-radius: 1.5rem; margin-right: 10px;"
+                    data-bs-toggle="modal" data-bs-target="#crearProductoModal">
+                    <i class="fa fa-plus"></i> Agregar Nuevo Producto
+                </a>
+                <a href="#" class="btn btn-outline-info" style="font-weight:600; border-radius: 1.5rem;"
+                    data-bs-toggle="modal" data-bs-target="#importarExcelModal">
+                    <i class="fa fa-file-excel"></i> Importar desde Excel
+                </a>
+            </div>
         <?php endif; ?>
 
         <?php if(session('success') || session('error')): ?>
@@ -499,7 +536,63 @@
                 });
             });
         </script>
-    </div>
-<?php $__env->stopSection(); ?>
 
+        <!-- Modal Importar Excel -->
+        <div class="modal fade" id="importarExcelModal" tabindex="-1" aria-labelledby="importarExcelModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" style="background: #15401b; color: white;">
+                        <h5 class="modal-title" id="importarExcelModalLabel">
+                            <i class="fa fa-file-excel"></i> Importar Productos desde Excel
+                        </h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form action="<?php echo e(route('productos.importar-excel')); ?>" method="POST" enctype="multipart/form-data" id="formImportarExcel">
+                        <?php echo csrf_field(); ?>
+                        <div class="modal-body">
+                            <div class="alert alert-info" role="alert">
+                                <strong>Instrucciones:</strong><br>
+                                <ul style="margin-bottom: 0; margin-top: 10px;">
+                                    <li>El archivo debe ser en formato <strong>.xlsx</strong>, <strong>.xls</strong> o <strong>.csv</strong></li>
+                                    <li>La primera fila debe contener los encabezados</li>
+                                    <li>Columnas requeridas (en este orden):
+                                        <ol style="margin-bottom: 0; margin-top: 5px;">
+                                            <li><strong>nombre</strong> - Nombre del producto</li>
+                                            <li><strong>descripcion</strong> - Descripción del producto</li>
+                                            <li><strong>precio</strong> - Precio del producto (número)</li>
+                                            <li><strong>stock</strong> - Cantidad en stock (número entero)</li>
+                                            <li><strong>categoria_id</strong> - ID de la categoría</li>
+                                        </ol>
+                                    </li>
+                                    <li>Ejemplo de fila: Chocolate | Delicioso chocolate negro | 5.99 | 100 | 1</li>
+                                </ul>
+                            </div>
+
+                            <div class="mb-3">
+                                <a href="<?php echo e(asset('plantilla_productos.csv')); ?>" class="btn btn-sm btn-secondary mb-3" download>
+                                    <i class="fa fa-download"></i> Descargar plantilla de ejemplo
+                                </a>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="archivoImportar" class="form-label">Seleccionar archivo</label>
+                                <input type="file" class="form-control" id="archivoImportar" name="archivo" accept=".xlsx,.xls,.csv" required>
+                                <small class="text-muted">Tamaño máximo: 5 MB</small>
+                            </div>
+
+                            <div class="alert alert-warning" role="alert">
+                                <strong>⚠️ Importante:</strong> Verifica que los datos sean correctos antes de importar. Los productos con errores en validación no serán creados.
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-success">
+                                <i class="fa fa-upload"></i> Importar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>    </div>
+<?php $__env->stopSection(); ?>
 <?php echo $__env->make('layouts.app', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\xampp\htdocs\dulce-contigo-final\resources\views/productos/index.blade.php ENDPATH**/ ?>

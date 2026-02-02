@@ -1,0 +1,9 @@
+Este archivo de plantilla CSV puede ser abierto y editado con Excel, Google Sheets o LibreOffice Calc.
+
+Para usar esta plantilla:
+1. Abre este archivo con Excel o Google Sheets
+2. Completa las columnas con tus datos de productos
+3. Guarda como archivo .xlsx o .csv
+4. Importa en la aplicación
+
+IMPORTANTE: Respeta el orden de las columnas y los tipos de datos.
