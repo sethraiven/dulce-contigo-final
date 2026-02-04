@@ -29,7 +29,7 @@
     </style>
 
     <div class="banner-productos">
-        <h1><i class="fa fa-cubes"></i> Catálogo de Productos</h1>
+        <h1><i class="fa fa-cubes"></i>Catálogo de Productos como administrador</h1>
         <p>Gestiona y organiza tu inventario</p>
     </div>
 
