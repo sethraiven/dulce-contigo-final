@@ -87,8 +87,10 @@
                         // Calcular el total del pedido sumando precio * cantidad de cada producto
                         $total = 0;
                         $productos = json_decode($pedido->productos, true);
-                        foreach($productos as $producto) {
-                            $total += $producto['precio'] * $producto['cantidad'];
+                        if ($productos) {
+                            foreach($productos as $producto) {
+                                $total += $producto['precio'] * $producto['cantidad'];
+                            }
                         }
 
                         // Generar número de pedido: AAMMDD-XXX
@@ -111,15 +113,28 @@
                         <td>{{ $pedido->comentarios }}</td>
                         <td>
                             <!-- Listado de productos del pedido -->
-                            <ul class="mb-0 ps-3" style="font-size: 0.97rem;">
-                                @foreach($productos as $producto)
-                                    <li>
-                                        <span class="fw-semibold" style="color:#15401b;">{{ $producto['nombre'] }}</span>
-                                        x{{ $producto['cantidad'] }}
-                                        <span class="text-muted">(${{ number_format($producto['precio'], 2) }} c/u)</span>
-                                    </li>
-                                @endforeach
-                            </ul>
+                            <!-- Listado de productos del pedido o Imagen -->
+                            @if($pedido->imagen_path)
+                                <div class="text-center">
+                                    <span class="badge bg-success mb-2">Pedido por Foto</span>
+                                    <br>
+                                    <a href="{{ asset('storage/' . $pedido->imagen_path) }}" target="_blank">
+                                        <img src="{{ asset('storage/' . $pedido->imagen_path) }}" alt="Foto del pedido" class="img-thumbnail" style="max-height: 100px;">
+                                    </a>
+                                </div>
+                            @elseif($productos)
+                                <ul class="mb-0 ps-3" style="font-size: 0.97rem;">
+                                    @foreach($productos as $producto)
+                                        <li>
+                                            <span class="fw-semibold" style="color:#15401b;">{{ $producto['nombre'] }}</span>
+                                            x{{ $producto['cantidad'] }}
+                                            <span class="text-muted">(${{ number_format($producto['precio'], 2) }} c/u)</span>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            @else
+                                <span class="text-muted fst-italic">Sin detalles</span>
+                            @endif
                         </td>
                         <!-- Total del pedido -->
                         <td class="fw-bold text-success" style="font-size:1.15rem;">

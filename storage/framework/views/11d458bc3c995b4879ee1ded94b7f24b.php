@@ -86,8 +86,10 @@
                         // Calcular el total del pedido sumando precio * cantidad de cada producto
                         $total = 0;
                         $productos = json_decode($pedido->productos, true);
-                        foreach($productos as $producto) {
-                            $total += $producto['precio'] * $producto['cantidad'];
+                        if ($productos) {
+                            foreach($productos as $producto) {
+                                $total += $producto['precio'] * $producto['cantidad'];
+                            }
                         }
 
                         // Generar número de pedido: AAMMDD-XXX
@@ -110,16 +112,29 @@
                         <td><?php echo e($pedido->comentarios); ?></td>
                         <td>
                             <!-- Listado de productos del pedido -->
-                            <ul class="mb-0 ps-3" style="font-size: 0.97rem;">
-                                <?php $__currentLoopData = $productos; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $producto): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                    <li>
-                                        <span class="fw-semibold" style="color:#15401b;"><?php echo e($producto['nombre']); ?></span>
-                                        x<?php echo e($producto['cantidad']); ?>
+                            <!-- Listado de productos del pedido o Imagen -->
+                            <?php if($pedido->imagen_path): ?>
+                                <div class="text-center">
+                                    <span class="badge bg-success mb-2">Pedido por Foto</span>
+                                    <br>
+                                    <a href="<?php echo e(asset('storage/' . $pedido->imagen_path)); ?>" target="_blank">
+                                        <img src="<?php echo e(asset('storage/' . $pedido->imagen_path)); ?>" alt="Foto del pedido" class="img-thumbnail" style="max-height: 100px;">
+                                    </a>
+                                </div>
+                            <?php elseif($productos): ?>
+                                <ul class="mb-0 ps-3" style="font-size: 0.97rem;">
+                                    <?php $__currentLoopData = $productos; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $producto): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                        <li>
+                                            <span class="fw-semibold" style="color:#15401b;"><?php echo e($producto['nombre']); ?></span>
+                                            x<?php echo e($producto['cantidad']); ?>
 
-                                        <span class="text-muted">($<?php echo e(number_format($producto['precio'], 2)); ?> c/u)</span>
-                                    </li>
-                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                            </ul>
+                                            <span class="text-muted">($<?php echo e(number_format($producto['precio'], 2)); ?> c/u)</span>
+                                        </li>
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                </ul>
+                            <?php else: ?>
+                                <span class="text-muted fst-italic">Sin detalles</span>
+                            <?php endif; ?>
                         </td>
                         <!-- Total del pedido -->
                         <td class="fw-bold text-success" style="font-size:1.15rem;">

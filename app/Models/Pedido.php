@@ -8,7 +8,7 @@ use Carbon\Carbon;
 class Pedido extends Model
 {
     protected $fillable = [
-        'nombre', 'telefono', 'metodo_pago', 'comentarios', 'productos'
+        'nombre', 'telefono', 'metodo_pago', 'comentarios', 'productos', 'imagen_path'
     ];
 
     public function index()

@@ -417,11 +417,10 @@
                 <img src="{{ asset('imagenes/logo.jpg') }}" alt="Logo" >
                 <div class="brand-text">
                     <div class="brand-name">FERRYCOLORES RH</div>
-                    <div class="brand-slogan">Dulce Contigo</div>
                 </div>
                 @auth
                     <div class="user-welcome">
-                        <span><i class="fas fa-user"></i> {{ Auth::user()->name }}</span>
+                        <span><i class="fas fa-user"></i> Bienvenid@ {{ Auth::user()->name }}</span>
                     </div>
                 @endauth
             </a>
@@ -546,7 +545,7 @@
                 <div class="col-lg-4 col-md-6 footer-section">
                     <h5><i class="fas fa-link"></i> Enlaces Rápidos</h5>
                     <p><a href="{{ url('/') }}"><i class="fas fa-chevron-right"></i> Inicio</a></p>
-                    <p><a href="{{ route('categorias.producto', 1) }}"><i class="fas fa-chevron-right"></i> Ferretería</a></p>
+                    <p><a href="{{ route('categorias.producto', 4) }}"><i class="fas fa-chevron-right"></i> Ferretería</a></p>
                     <p><a href="{{ route('categorias.producto', 2) }}"><i class="fas fa-chevron-right"></i> Material de playa</a></p>
                     <p><a href="{{ route('carrito.index') }}"><i class="fas fa-chevron-right"></i> Carrito</a></p>
                 </div>
@@ -559,7 +558,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p><i class="fas fa-copyright"></i> {{ date('Y') }} FERRYCOLORES RH - Dulce Contigo. Todos los derechos reservados.</p>
+                <p><i class="fas fa-copyright"></i> {{ date('Y') }} FERRYCOLORES RH. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>

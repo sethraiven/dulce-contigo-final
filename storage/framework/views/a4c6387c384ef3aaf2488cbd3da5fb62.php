@@ -47,6 +47,25 @@
           font-weight: 300;
           text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
       }
+      .btn-hero-cta {
+          background-color: #c28e00;
+          border-color: #c28e00;
+          color: #fff;
+          font-weight: 600;
+          border-radius: 50px;
+          padding: 12px 30px;
+          font-size: 1.2rem;
+          margin-top: 20px;
+          transition: all 0.3s ease;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      }
+      .btn-hero-cta:hover {
+          background-color: #a07400;
+          border-color: #a07400;
+          transform: translateY(-3px);
+          box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+          color: #fff;
+      }
       .section-title {
         font-size: 2.5rem;
         margin-top: 40px;
@@ -286,7 +305,29 @@ footer {
   opacity: 0;
 }
 
-.animate__fadeInUp {
+    .btn-hero-cta {
+        background-color: #c28e00;
+        border-color: #c28e00;
+        color: #fff;
+        font-weight: 600;
+        border-radius: 50px;
+        padding: 10px 25px;
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+    }
+    .btn-hero-cta:hover {
+        background-color: #a07400;
+        border-color: #a07400;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+        color: #fff;
+    }
+    .animate__fadeInUp {
   animation-name: fadeInUp;
   animation-duration: 1s;
   opacity: 1 !important;
@@ -300,6 +341,12 @@ footer {
 
     <div class="container mt-4">
           <h2 class="section-title text-center mb-2 mt-2 text-success">Te acompañamos en tus ideas y construcciones</h2>
+          
+          <div class="text-center mb-4">
+              <a href="#pedido-express" class="btn btn-hero-cta animate__animated animate__fadeInUp">
+                  <i class="fas fa-camera me-2"></i> Hacer Pedido con Foto
+              </a>
+          </div>
 
 
 
@@ -307,25 +354,26 @@ footer {
         <div class="carousel-inner">
           <?php
                 $imagenes = [
-                    'Postres'=>'https://0701.static.prezi.com/preview/v2/otksijunl3nhsozxhpzd4w3jnx6jc3sachvcdoaizecfr3dnitcq_3_0.png',
-                    'Conservas'=>'https://www.farmaceuticosdesevilla.es/consejossaludables/wp-content/uploads/sites/3/2022/03/1450119467-fotolia_70795211_subscription_xxl.jpg',
-                    'otros'=>'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQglHOIm8nCfAhle733e6qyg3Wn_MHfR3PKPw&s',
+                    'Postres' => 'https://0701.static.prezi.com/preview/v2/otksijunl3nhsozxhpzd4w3jnx6jc3sachvcdoaizecfr3dnitcq_3_0.png',
+                    'Conservas' => 'https://www.farmaceuticosdesevilla.es/consejossaludables/wp-content/uploads/sites/3/2022/03/1450119467-fotolia_70795211_subscription_xxl.jpg',
                     
-                    'ferretería'=>'https://www.bocelujosla86.com/cdn/shop/collections/Ferreteria.jpg?v=1593555968',
+                    // Imágenes de hardware/ferretería
+                    'otros' => 'https://images.unsplash.com/photo-1540822606822-261564aa712a?w=1200&h=600&fit=crop',
+                    'Otros' => 'https://images.unsplash.com/photo-1540822606822-261564aa712a?w=1200&h=600&fit=crop',
+                    
+                    'ferretería' => 'https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?w=1200&h=600&fit=crop',
+                    'Ferretería' => 'https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?w=1200&h=600&fit=crop',
 
-                    //agregar nombre y url para mas categorias
-        ];
+                    'Material de playa' => 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=1200&h=600&fit=crop',
+                    'material de playa' => 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=1200&h=600&fit=crop',
+                ];
             ?>
 
-            <?php
-                $imagenes = array_merge($imagenes, [
-                    'Ferretería' => 'https://images.unsplash.com/photo-1562607503-461baf23b79b?w=1200&h=600&fit=crop'
-                ]);
-            ?>
+
 
             <?php $__currentLoopData = $categorias; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $categoria): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <div class="carousel-item <?php if($index == 0): ?> active <?php endif; ?>">
-                    <div class="d-flex justify-content-center align-items-center flex-column" stjpgyle="height: 500px;">
+                    <div class="d-flex justify-content-center align-items-center flex-column" style="height: 500px;">
 
                         <img src="<?php echo e($imagenes[$categoria->nombre] ?? 'https://via.placeholder.com'); ?>" class="" alt="<?php echo e($categoria->nombre); ?>"
                         style="height: 400px; width:960px">
@@ -363,32 +411,32 @@ footer {
 <!-- Galería de Productos -->
 <section class="py-5">
   <div class="container">
-    <h2 class="section-title text-center text-success mt-2 ">Productos de calidad</h2>
+    <h2 class="section-title text-center text-success mt-2 ">Productos Importados</h2>
     <div class="row mt-4">
       <div class="col-md-4 mb-4">
         <div class="card h-100 shadow-sm">
-          <a href="<?php echo e(route('categorias.producto', 1)); ?>"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE65isew8FyqXBfCJns4fW4OIcTAZKqyjlFQ&s"class="card-img-top" alt="Cheesecake"></a>
+          <a href="#"><img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?w=800&q=80" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Taladro Percutor"></a>
           <div class="card-body">
-            <h5 class="card-title">Herraminetas </h5>
-            <p class="card-text">Todo lo que necesitas para tu hogar.</p>
+            <h5 class="card-title">Taladros de Alta Potencia</h5>
+            <p class="card-text">Perforación precisa en concreto y madera. Ideal para trabajos pesados y uso doméstico.</p>
           </div>
         </div>
       </div>
       <div class="col-md-4 mb-4">
         <div class="card h-100 shadow-sm">
-          <a href="<?php echo e(route('categorias.producto', 2)); ?>"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/1d/0c/8f/pensabas-que-no-podias.jpg?w=800&h=-1&s=1" class="card-img-top" alt="Cupcakes"></a>
+          <a href="#"><img src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=800&q=80" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Kit de Herramientas"></a>
           <div class="card-body">
-            <h5 class="card-title">Pimenton & aji rocoto</h5>
-            <p class="card-text">Una mezcla increible entre dulce y picante.</p>
+            <h5 class="card-title">Kits de Herramientas</h5>
+            <p class="card-text">Sets completos con llaves, destornilladores y más. Todo lo esencial en un solo maletín.</p>
           </div>
         </div>
       </div>
       <div class="col-md-4 mb-4">
         <div class="card h-100 shadow-sm">
-          <a href="<?php echo e(route('categorias.producto', 1)); ?>"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/0e/d5/06/los-productos-mas-frescos.jpg?w=800&h=-1&s=1" class="card-img-top" alt="Brownie"></a>
+           <a href="#"><img src="https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=800&q=80" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Herramientas de Corte"></a>
           <div class="card-body">
-            <h5 class="card-title">Postre de maracuya</h5>
-            <p class="card-text">Intenso, húmedo y refrescante.</p>
+            <h5 class="card-title">Sierras y Corte</h5>
+            <p class="card-text">Sierras circulares y caladoras para cortes limpios y profesionales en cualquier material.</p>
           </div>
         </div>
       </div>
@@ -411,17 +459,13 @@ footer {
       <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
         <h2 class="fw-bold mb-3 text-success">Nuestra Historia</h2>
         <p class="lead" style="font-size: 1.1rem;">
-          Todo comenzó con <strong>Don Fabio</strong>, una apasionado repostero que heredó las recetas secretas de su abuela, 
-          horneadas con amor y una pizca de magia. Cada pastel que preparaba era más que un postre: era un abrazo, 
-          un recuerdo, una celebración.
+          xxxx <strong>xx xxx</strong>, xxxxxxxxxxxxxxxxx
         </p>
         <p class="lead" style="font-size: 1.1rem;">
-          En 1998, Don Fabio decidió abrir <strong>Dulce Contigo</strong>, un rincón donde los sabores clásicos y las técnicas modernas 
-          se combinan para crear experiencias inolvidables. Desde entonces, hemos endulzado miles de momentos con 
-          nuestras creaciones artesanales.
+          xxxxx <strong>xxxx</strong>, xxxxx
         </p>
         <blockquote class="blockquote mt-4 text-muted" data-aos="fade-up" data-aos-delay="400">
-          <p>“Preparamos y cocinamos felicidad, dia a dia.”</p>
+          <p>“Listo servir dia a dia dia a dia.”</p>
         </blockquote>
       </div>
     </div>
@@ -430,38 +474,130 @@ footer {
 </section>
 
  
-<section class="about-us-section py-5 position-relative" style="background: white;">
+<section id="pedido-express" class="order-section py-5 position-relative" style="background: white;">
   <div class="container">
     <div class="row align-items-center g-5">
       <!-- Texto a la izquierda -->
       <div class="col-lg-6 animate__animated">
-        <h2 class="fw-bold mb-3 text-success">Sobre Nosotros</h2>
+        <h2 class="fw-bold mb-3 text-success">¿Tienes una lista o una foto?</h2>
         <p class="lead" style="font-size: 1.1rem;">
-          En <strong>Dulce Contigo</strong>, llevamos la pasión por la repostería a otro nivel. Creamos postres artesanales
-          únicos que no solo deleitan el paladar, sino también el corazón. Cada creación es preparada con ingredientes
-          seleccionados y mucho amor.
+          Sube la foto de tu pedido, lista de materiales o el producto que buscas, nosotros nos encargamos del resto.
         </p>
         <ul class="list-unstyled text-muted" style="font-size: 1.1rem; font-family: 'Segoe UI', Arial, sans-serif;">
-          <li>✔ Ingredientes 100% naturales de alta calidad</li>
-          <li>✔ Recetas tradicionales con un toque moderno</li>
-          <li>✔ Atención personalizada y con mucho amor</li>
+            <li><i class="fas fa-camera text-success me-2"></i> Toma una foto a tu lista</li>
+            <li><i class="fas fa-upload text-success me-2"></i> Súbela en el formulario</li>
+            <li><i class="fas fa-check-circle text-success me-2"></i> ¡Listo! Te contactaremos</li>
         </ul>
       </div>
 
-      <!-- Imagen a la derecha -->
+      <!-- Formulario a la derecha -->
       <div class="col-lg-6 animate__animated">
-        <div class="image-wrapper position-relative hover-scale">
-          <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/27/ae/0a/1e/nada-mejor-que-un-buen.jpg?w=800&h=-1&s=1" 
-               alt="Postres artesanales"
-               class="img-fluid rounded shadow-lg">
-          <div class="image-overlay">
-            <span class="text-white fs-4 fw-bold">¡Endulza tu día!</span>
-          </div>
+        <div class="card shadow-lg border-0">
+            <div class="card-body p-4">
+                <h4 class="card-title text-center text-success mb-4">Haz tu Pedido Express</h4>
+                <form id="pedidoFotoForm" enctype="multipart/form-data">
+                    <?php echo csrf_field(); ?>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" name="nombre" placeholder="Tu Nombre" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" name="telefono" placeholder="Tu Teléfono / WhatsApp" required>
+                    </div>
+                    <div class="mb-3">
+                        <select class="form-select" name="metodo_pago" required>
+                            <option value="">Método de Pago</option>
+                            <option value="Efectivo">Efectivo</option>
+                            <option value="Transferencia">Transferencia</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" name="comentarios" rows="2" placeholder="Comentarios adicionales (opcional)"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="imagenInput" class="form-label text-muted small">Sube tu foto (Lista, producto, etc)</label>
+                        <input class="form-control" type="file" id="imagenInput" name="image" accept="image/*" required>
+                    </div>
+                    
+                    <div class="mb-3 text-center">
+                        <img id="preview" src="#" class="img-fluid rounded d-none" style="max-height: 150px;">
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-success" id="btnSubmitFoto">
+                            <i class="fas fa-paper-plane me-2"></i> Enviar Pedido
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
+        
+        <script>
+            // Previsualización
+            document.getElementById('imagenInput').addEventListener('change', function(event) {
+                const file = event.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        const preview = document.getElementById('preview');
+                        preview.src = e.target.result;
+                        preview.classList.remove('d-none');
+                    }
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            // Envío AJAX
+            document.getElementById('pedidoFotoForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const formData = new FormData(this);
+                const btn = document.getElementById('btnSubmitFoto');
+                
+                // Deshabilitar botón
+                btn.disabled = true;
+                btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Enviando...';
+
+                fetch('<?php echo e(url("/pedidos")); ?>', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.ok) {
+                        Swal.fire({
+                            icon: 'success',
+                            title: '¡Pedido Enviado!',
+                            text: 'Hemos recibido tu pedido con foto. Te contactaremos pronto.',
+                            confirmButtonColor: '#15401b'
+                        });
+                        this.reset();
+                        document.getElementById('preview').classList.add('d-none');
+                    } else {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Error',
+                            text: data.message || 'Hubo un problema al enviar el pedido.',
+                        });
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error de Conexión',
+                        text: 'No se pudo conectar con el servidor.',
+                    });
+                })
+                .finally(() => {
+                    btn.disabled = false;
+                    btn.innerHTML = '<i class="fas fa-paper-plane me-2"></i> Enviar Pedido';
+                });
+            });
+        </script>
       </div>
-    </div>
-  </div>
-</section>
 <!-- Animate.css (si aún no lo tienes) -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 

@@ -15,16 +15,28 @@ class PedidoController extends Controller
             'telefono' => 'required|string|max:30',
             'metodo_pago' => 'required|string',
             'comentarios' => 'nullable|string',
-            'productos' => 'required|array',
+            'productos' => 'nullable|array',
+            'image' => 'nullable|image|max:10240', // Max 10MB
         ]);
+
+        // Validar que haya productos O imagen
+        if (empty($request->productos) && !$request->hasFile('image')) {
+            return response()->json(['ok' => false, 'message' => 'Debes agregar productos o subir una foto del pedido.'], 422);
+        }
+
+        $imagenPath = null;
+        if ($request->hasFile('image')) {
+            $imagenPath = $request->file('image')->store('pedidos', 'public');
+        }
 
         Pedido::create([
             'nombre' => $request->nombre,
             'telefono' => $request->telefono,
             'metodo_pago' => $request->metodo_pago,
             'comentarios' => $request->comentarios,
-            'productos' => json_encode($request->productos),
-            'estado' => 'pendiente', // Asegura que los nuevos pedidos sean pendientes
+            'productos' => $request->productos ? json_encode($request->productos) : null,
+            'imagen_path' => $imagenPath,
+            'estado' => 'pendiente',
         ]);
 
         return response()->json(['ok' => true]);
