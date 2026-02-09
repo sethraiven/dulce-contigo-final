@@ -2,10 +2,10 @@
 
 @section('content')
 <div class="container py-4">
-    <h2 class="mb-4 text-center fw-bold" style="color:#15401b;">Carrito de compras</h2>
+    <h2 class="mb-4 text-center fw-bold" style="color:rgba(18, 33, 61, 1);">Carrito de compras</h2>
     <div id="carritoProductos" class="mb-4"></div>
     <div class="d-flex gap-3 justify-content-center">
-        <button type="button" class="btn btn-success btn-lg px-4 shadow-sm" id="btnPagar" style="font-weight:600; border-radius: 1.5rem;" data-bs-toggle="modal" data-bs-target="#modalPago">
+        <button type="button" class="btn btn-lg px-4 shadow-sm" id="btnPagar" style="background:rgba(18, 33, 61, 1); color:rgba(246, 253, 254, 1); font-weight:600; border-radius: 1.5rem;" data-bs-toggle="modal" data-bs-target="#modalPago">
             <i class="bi bi-credit-card"></i> Ir a pagar
         </button>
         <button onclick="vaciarCarrito()" class="btn btn-outline-dark btn-lg px-4 shadow-sm" style="font-weight:600; border-radius: 1.5rem;">
@@ -18,8 +18,8 @@
 <div class="modal fade" id="modalPago" tabindex="-1" aria-labelledby="modalPagoLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content rounded-4">
-      <div class="modal-header" style="background:#f8f9fa;">
-        <h5 class="modal-title fw-bold" id="modalPagoLabel" style="color:#15401b;">Finalizar compra</h5>
+      <div class="modal-header" style="background:rgba(18, 33, 61, 1);">
+        <h5 class="modal-title fw-bold" id="modalPagoLabel" style="color:rgba(246, 253, 254, 1);">Finalizar compra</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
       <form id="formPago">
@@ -48,8 +48,8 @@
             </div>
             <div id="qrPagoDiv" class="text-center mb-2" style="display:none;">
               <img src="/imagenes/qr.jpg" alt="QR de cuenta de ahorros" style="max-width:180px; width:100%; border-radius:1rem; border:2px solid #e9ecef; background:#fff; padding:8px;">
-              <div style="font-size:0.95rem; color:#15401b; margin-top:0.5rem;">Escanea este QR para pagar a la cuenta de ahorros y enviar a:  <a href="https://api.whatsapp.com/send?phone=573246283231&text=Hola%20%F0%9F%91%8B%20Miguelucho" target="_blank"><i class="fab fa-whatsapp"></i>3246283231 </a></div>
-              <div style="font-size:0.95rem; color:#15401b; margin-top:0.5rem;">Acepto terminos y condiciones</div>
+              <div style="font-size:0.95rem; color:rgba(18, 33, 61, 1); margin-top:0.5rem;">Escanea este QR para pagar a la cuenta de ahorros y enviar a:  <a href="https://api.whatsapp.com/send?phone=573246283231&text=Hola%20%F0%9F%91%8B%20Miguelucho" target="_blank" style="color:rgba(217, 140, 82, 1);"><i class="fab fa-whatsapp"></i>3246283231 </a></div>
+              <div style="font-size:0.95rem; color:rgba(18, 33, 61, 1); margin-top:0.5rem;">Acepto terminos y condiciones</div>
             </div>
           </div>
           <div class="mb-3">
@@ -59,7 +59,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
-          <button type="submit" class="btn btn-success">Enviar pedido</button>
+          <button type="submit" class="btn" style="background:rgba(217, 140, 82, 1); color:rgba(18, 33, 61, 1); font-weight:600;">Enviar pedido</button>
         </div>
       </form>
     </div>
@@ -76,7 +76,7 @@
         transition: box-shadow .2s;
     }
     .carrito-card:hover {
-        box-shadow: 0 4px 24px 0 rgba(21,64,27,0.13);
+        box-shadow: 0 4px 24px 0 rgba(18, 33, 61, 0.13);
     }
     .carrito-img {
         width: 70px;
@@ -89,17 +89,17 @@
     .carrito-nombre {
         font-size: 1.13rem;
         font-weight: 600;
-        color: #15401b;
+        color: rgba(18, 33, 61, 1);
     }
     .carrito-precio {
         font-size: 1rem;
-        color: #198754;
+        color: rgba(217, 140, 82, 1);
         font-weight: 500;
     }
     .carrito-subtotal {
         font-size: 1.1rem;
         font-weight: 600;
-        color: #15401b;
+        color: rgba(18, 33, 61, 1);
     }
     .carrito-btn-cantidad {
         border-radius: 50%;
@@ -114,12 +114,12 @@
     .carrito-total-label {
         font-size: 1.3rem;
         font-weight: 600;
-        color: #15401b;
+        color: rgba(18, 33, 61, 1);
     }
     .carrito-total {
         font-size: 2rem;
         font-weight: 700;
-        color: #198754;
+        color: rgba(217, 140, 82, 1);
     }
 </style>
 
@@ -269,8 +269,8 @@
                     title: '¡Pedido recibido!',
                     text: 'Tu pedido ha sido registrado correctamente.',
                     confirmButtonText: 'Aceptar',
-                    customClass: { confirmButton: 'btn btn-success' },
-                    buttonsStyling: false
+                    confirmButtonColor: 'rgba(18, 33, 61, 1)',
+                    buttonsStyling: true
                 }).then(() => {
                     window.location.href = '/';
                 });

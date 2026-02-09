@@ -4,7 +4,7 @@
     .producto-detalle-card {
         background: #fff;
         border-radius: 18px;
-        box-shadow: 0 8px 32px 0 rgba(21, 64, 27, 0.12);
+        box-shadow: 0 8px 32px 0 rgba(18, 33, 61, 0.12);
         border: none;
         padding: 2.5rem 2rem 2rem 2rem;
         max-width: 800px;
@@ -16,14 +16,14 @@
         height: 320px;
         object-fit: cover;
         border-radius: 16px;
-        border: 2px solid #c28e00;
-        box-shadow: 0 4px 16px rgba(21, 64, 27, 0.10);
+        border: 2px solid rgba(217, 140, 82, 1);
+        box-shadow: 0 4px 16px rgba(18, 33, 61, 0.10);
         background: #f6f6f6;
         margin: 0 auto 18px auto;
         display: block;
     }
     .producto-detalle-nombre {
-        color: #15401b;
+        color: rgba(18, 33, 61, 1);
         font-size: 2rem;
         font-weight: 700;
         text-align: center;
@@ -31,7 +31,7 @@
         letter-spacing: 0.03em;
     }
     .producto-detalle-precio {
-        color: #c28e00;
+        color: rgba(217, 140, 82, 1);
         font-size: 1.4rem;
         font-weight: 700;
         margin-bottom: 10px;
@@ -59,30 +59,30 @@
         transition: background 0.2s, color 0.2s;
     }
     .producto-detalle-btns .btn-light {
-        border: 1px solid #15401b;
-        color: #15401b;
+        border: 1px solid rgba(18, 33, 61, 1);
+        color: rgba(18, 33, 61, 1);
     }
     .producto-detalle-btns .btn-light:hover {
-        background: #15401b;
-        color: #fff;
+        background: rgba(18, 33, 61, 1);
+        color: rgba(246, 253, 254, 1);
     }
     .producto-detalle-btns .btn-secondary {
-        background: #c28e00;
-        color: #15401b;
+        background: rgba(217, 140, 82, 1);
+        color: rgba(18, 33, 61, 1);
         border: none;
     }
     .producto-detalle-btns .btn-secondary:hover {
-        background: #15401b;
-        color: #fff;
+        background: rgba(18, 33, 61, 1);
+        color: rgba(246, 253, 254, 1);
     }
     .producto-detalle-btns .btn-success {
-        background: #15401b;
+        background: rgba(18, 33, 61, 1);
         border: none;
-        color: #fff;
+        color: rgba(246, 253, 254, 1);
     }
     .producto-detalle-btns .btn-success:hover {
-        background: #c28e00;
-        color: #15401b;
+        background: rgba(217, 140, 82, 1);
+        color: rgba(18, 33, 61, 1);
     }
     @media (max-width: 768px) {
         .producto-detalle-card {

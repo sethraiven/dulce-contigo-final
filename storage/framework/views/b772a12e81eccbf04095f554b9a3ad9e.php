@@ -1,13 +1,13 @@
 <?php $__env->startSection('content'); ?>
     <style>
         .banner-productos {
-            background: linear-gradient(135deg, #15401b 0%, #2d7a38 100%);
-            color: white;
+            background: linear-gradient(135deg, rgba(18, 33, 61, 1) 0%, rgba(38, 53, 81, 1) 100%);
+            color: rgba(246, 253, 254, 1);
             padding: 10px 15px;
             text-align: center;
             margin-bottom: 15px;
             border-radius: 0;
-            box-shadow: 0 4px 12px rgba(21, 64, 27, 0.2);
+            box-shadow: 0 4px 12px rgba(18, 33, 61, 0.2);
         }
 
         .banner-productos h1 {
@@ -78,17 +78,17 @@
                 #productos-table {
                     background: #fff;
                     border-radius: 16px;
-                    box-shadow: 0 4px 16px rgba(21, 64, 27, 0.10);
+                    box-shadow: 0 4px 16px rgba(18, 33, 61, 0.10);
                     overflow: hidden;
                     font-size: 1rem;
                 }
 
                 #productos-table th {
-                    background: #15401b;
-                    color: #fff;
+                    background: rgba(18, 33, 61, 1);
+                    color: rgba(246, 253, 254, 1);
                     text-align: center;
                     font-weight: 700;
-                    border-bottom: 2px solid #c28e00;
+                    border-bottom: 2px solid rgba(217, 140, 82, 1);
                     vertical-align: middle;
                 }
 
@@ -106,7 +106,7 @@
 
                 #productos-table img {
                     border-radius: 8px;
-                    border: 2px solid #c28e00;
+                    border: 2px solid rgba(217, 140, 82, 1);
                     background: #f6f6f6;
                     max-width: 80px;
                     max-height: 80px;
@@ -116,8 +116,8 @@
                 }
 
                 .btn-warning.btn-sm {
-                    background: #c28e00;
-                    color: #15401b;
+                    background: rgba(217, 140, 82, 1);
+                    color: rgba(18, 33, 61, 1);
                     border: none;
                     border-radius: 6px;
                     font-weight: 600;
@@ -126,13 +126,13 @@
                 }
 
                 .btn-warning.btn-sm:hover {
-                    background: #15401b;
-                    color: #fff;
+                    background: rgba(18, 33, 61, 1);
+                    color: rgba(246, 253, 254, 1);
                 }
 
                 .btn-danger.btn-sm {
-                    background: #15401b;
-                    color: #fff;
+                    background: rgba(18, 33, 61, 1);
+                    color: rgba(246, 253, 254, 1);
                     border: none;
                     border-radius: 6px;
                     font-weight: 600;
@@ -141,20 +141,20 @@
                 }
 
                 .btn-danger.btn-sm:hover {
-                    background: #c28e00;
-                    color: #15401b;
+                    background: rgba(217, 140, 82, 1);
+                    color: rgba(18, 33, 61, 1);
                 }
 
                 /* Estilos para la modal de edición */
                 #editarProductoModal .modal-content {
                     border-radius: 16px;
-                    box-shadow: 0 2px 16px rgba(21, 64, 27, 0.12);
+                    box-shadow: 0 2px 16px rgba(18, 33, 61, 0.12);
                     border: 1px solid #e0e0e0;
                 }
 
                 #editarProductoModal .modal-header {
-                    background: #15401b;
-                    color: #fff;
+                    background: rgba(18, 33, 61, 1);
+                    color: rgba(246, 253, 254, 1);
                     border-radius: 16px 16px 0 0;
                     font-weight: bold;
                     text-align: center;
@@ -167,15 +167,15 @@
                 }
 
                 #editarProductoModal .btn-primary {
-                    background: #15401b;
+                    background: rgba(18, 33, 61, 1);
                     border: none;
                     font-weight: 600;
                     border-radius: 8px;
                 }
 
                 #editarProductoModal .btn-primary:hover {
-                    background: #c28e00;
-                    color: #fff;
+                    background: rgba(217, 140, 82, 1);
+                    color: rgba(246, 253, 254, 1);
                 }
 
                 #editarProductoModal .btn-secondary {
@@ -183,12 +183,12 @@
                 }
 
                 #editarProductoModal .form-label {
-                    color: #15401b;
+                    color: rgba(18, 33, 61, 1);
                     font-weight: 600;
                 }
 
                 #editarProductoModal .form-control:focus {
-                    border-color: #15401b;
+                    border-color: rgba(18, 33, 61, 1);
                     box-shadow: none;
                 }
 
@@ -201,13 +201,13 @@
                 /* Estilos para la modal de creación */
                 #crearProductoModal .modal-content {
                     border-radius: 16px;
-                    box-shadow: 0 2px 16px rgba(21, 64, 27, 0.12);
+                    box-shadow: 0 2px 16px rgba(18, 33, 61, 0.12);
                     border: 1px solid #e0e0e0;
                 }
 
                 #crearProductoModal .modal-header {
-                    background: #15401b;
-                    color: #fff;
+                    background: rgba(18, 33, 61, 1);
+                    color: rgba(246, 253, 254, 1);
                     border-radius: 16px 16px 0 0;
                     font-weight: bold;
                     text-align: center;
@@ -220,15 +220,15 @@
                 }
 
                 #crearProductoModal .btn-primary {
-                    background: #15401b;
+                    background: rgba(18, 33, 61, 1);
                     border: none;
                     font-weight: 600;
                     border-radius: 8px;
                 }
 
                 #crearProductoModal .btn-primary:hover {
-                    background: #c28e00;
-                    color: #fff;
+                    background: rgba(217, 140, 82, 1);
+                    color: rgba(246, 253, 254, 1);
                 }
 
                 #crearProductoModal .btn-secondary {
@@ -236,12 +236,12 @@
                 }
 
                 #crearProductoModal .form-label {
-                    color: #15401b;
+                    color: rgba(18, 33, 61, 1);
                     font-weight: 600;
                 }
 
                 #crearProductoModal .form-control:focus {
-                    border-color: #15401b;
+                    border-color: rgba(18, 33, 61, 1);
                     box-shadow: none;
                 }
 
@@ -541,7 +541,7 @@
         <div class="modal fade" id="importarExcelModal" tabindex="-1" aria-labelledby="importarExcelModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header" style="background: #15401b; color: white;">
+                    <div class="modal-header" style="background: rgba(18, 33, 61, 1); color: rgba(246, 253, 254, 1);">
                         <h5 class="modal-title" id="importarExcelModalLabel">
                             <i class="fa fa-file-excel"></i> Importar Productos desde Excel
                         </h5>
@@ -586,7 +586,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                            <button type="submit" class="btn btn-success">
+                            <button type="submit" class="btn" style="background:rgba(217, 140, 82, 1); color:rgba(18, 33, 61, 1); font-weight:600;">
                                 <i class="fa fa-upload"></i> Importar
                             </button>
                         </div>

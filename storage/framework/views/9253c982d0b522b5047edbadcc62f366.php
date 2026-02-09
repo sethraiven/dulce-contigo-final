@@ -19,28 +19,29 @@
         border: 1px solid #e0e0e0;
     }
     .register-card .card-header {
-        background: #15401b;
-        color: #fff;
+        background: rgba(18, 33, 61, 1);
+        color: rgba(246, 253, 254, 1);
         font-weight: bold;
         text-align: center;
         border-radius: 16px 16px 0 0;
         font-size: 1.3rem;
     }
     .btn-primary {
-        background: #15401b;
+        background: rgba(18, 33, 61, 1);
+        color: rgba(246, 253, 254, 1);
         border: none;
         font-weight: 600;
     }
     .btn-primary:hover {
-        background: #c28e00;
-        color: #fff;
+        background: rgba(217, 140, 82, 1);
+        color: rgba(18, 33, 61, 1);
     }
     .form-label {
-        color: #15401b;
+        color: rgba(18, 33, 61, 1);
         font-weight: 600;
     }
     .form-control:focus {
-        border-color: #15401b;
+        border-color: rgba(18, 33, 61, 1);
         box-shadow: none;
     }
     .form-control {
@@ -61,7 +62,7 @@
         top: 50%;
         transform: translateY(-50%);
         cursor: pointer;
-        color: #15401b;
+        color: rgba(18, 33, 61, 1);
         z-index: 2;
         font-size: 1.2em;
         background: transparent;
@@ -78,7 +79,7 @@
         icon: 'success',
         title: '¡Éxito!',
         text: '<?php echo e(session('success')); ?>',
-        confirmButtonColor: '#15401b'
+        confirmButtonColor: 'rgba(18, 33, 61, 1)'
     });
 </script>
 <?php endif; ?>

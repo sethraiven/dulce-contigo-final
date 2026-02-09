@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
     body {
-        background: #eefaf3;
+        background: rgba(246, 253, 254, 1);
     }
     .login-container {
         min-height: 80vh;
@@ -13,7 +13,7 @@
     }
     .login-card {
         border-radius: 18px;
-        box-shadow: 0 8px 32px 0 rgba(28, 90, 36, 0.12);
+        box-shadow: 0 8px 32px 0 rgba(18, 33, 61, 0.12);
         border: none;
         background: #fff;
         padding: 2.5rem 2rem 2rem 2rem;
@@ -21,8 +21,8 @@
         width: 100%;
     }
     .login-card .card-header {
-        background: #15401b;
-        color: #fff;
+        background: rgba(18, 33, 61, 1);
+        color: rgba(246, 253, 254, 1);
         border-radius: 16px 16px 0 0;
         font-size: 1.5rem;
         text-align: center;
@@ -33,11 +33,12 @@
         padding: 1.2rem 1rem;
     }
     .form-control:focus {
-        border-color: #15401b !important; /* Verde oscuro */
-        box-shadow: 0 0 0 0.2rem rgba(21, 64, 27, 0.15) !important; /* Sombra verde */
+        border-color: rgba(18, 33, 61, 1) !important;
+        box-shadow: 0 0 0 0.2rem rgba(18, 33, 61, 0.15) !important;
     }
     .btn-primary {
-        background: #15401b;
+        background: rgba(18, 33, 61, 1);
+        color: rgba(246, 253, 254, 1);
         border: none;
         font-weight: 600;
         transition: background 0.2s;
@@ -47,15 +48,15 @@
         outline: none !important;
     }
     .btn-primary:hover {
-        background: #c28e00;
-        color: #fff;
+        background: rgba(217, 140, 82, 1);
+        color: rgba(18, 33, 61, 1);
     }
     .btn-link {
-        color: #c28e00;
+        color: rgba(217, 140, 82, 1);
         font-weight: 500;
     }
     .btn-link:hover {
-        color: #15401b;
+        color: rgba(18, 33, 61, 1);
         text-decoration: underline;
     }
     .register-link {
@@ -63,16 +64,16 @@
         text-align: center;
         margin-top: 1.5rem;
         font-size: 1rem;
-        color: #15401b;
+        color: rgba(18, 33, 61, 1);
     }
     .register-link a {
-        color: #c28e00;
+        color: rgba(217, 140, 82, 1);
         font-weight: 600;
         text-decoration: none;
         margin-left: 4px;
     }
     .register-link a:hover {
-        color: #15401b;
+        color: rgba(18, 33, 61, 1);
         text-decoration: underline;
     }
     /* Estilos para el icono del ojo */
@@ -85,7 +86,7 @@
         top: 50%;
         transform: translateY(-50%);
         cursor: pointer;
-        color: #15401b;
+        color: rgba(18, 33, 61, 1);
         z-index: 2;
         font-size: 1.1em;
     }

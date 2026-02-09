@@ -6,10 +6,10 @@
         <div class="col-md-10">
             <div class="card shadow-sm border-0">
                 <div class="card-header bg-white py-3 d-flex justify-content-between align-items-center">
-                    <h4 class="mb-0 text-dark fw-bold">
-                        <i class="fas fa-users text-primary me-2"></i> Gestión de Usuarios
+                    <h4 class="mb-0 fw-bold" style="color:rgba(18, 33, 61, 1);">
+                        <i class="fas fa-users me-2" style="color:rgba(217, 140, 82, 1);"></i> Gestión de Usuarios
                     </h4>
-                    <a href="{{ route('register') }}" class="btn btn-primary btn-sm">
+                    <a href="{{ route('register') }}" class="btn" style="background:rgba(18, 33, 61, 1); color:rgba(246, 253, 254, 1); font-weight:600;">
                         <i class="fas fa-user-plus me-1"></i> Registrar Nuevo
                     </a>
                 </div>
@@ -31,31 +31,31 @@
 
                     <div class="table-responsive">
                         <table class="table table-hover align-middle" id="usuariosTable">
-                            <thead class="table-light">
+                            <thead style="background:rgba(18, 33, 61, 1); color:rgba(246, 253, 254, 1);">
                                 <tr>
-                                    <th>ID</th>
-                                    <th>Nombre</th>
-                                    <th>Correo Electrónico</th>
-                                    <th>Fecha de Registro</th>
-                                    <th class="text-center">Acciones</th>
+                                    <th style="color:rgba(246, 253, 254, 1);">ID</th>
+                                    <th style="color:rgba(246, 253, 254, 1);">Nombre</th>
+                                    <th style="color:rgba(246, 253, 254, 1);">Correo Electrónico</th>
+                                    <th style="color:rgba(246, 253, 254, 1);">Fecha de Registro</th>
+                                    <th class="text-center" style="color:rgba(246, 253, 254, 1);">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach($usuarios as $usuario)
                                 <tr>
-                                    <td><span class="badge bg-light text-dark fw-normal">#{{ $usuario->id }}</span></td>
-                                    <td><span class="fw-semibold">{{ $usuario->name }}</span></td>
+                                    <td><span class="badge" style="background:rgba(246, 253, 254, 1); color:rgba(18, 33, 61, 1); border:1px solid rgba(18, 33, 61, 0.1);">#{{ $usuario->id }}</span></td>
+                                    <td><span class="fw-semibold" style="color:rgba(18, 33, 61, 1);">{{ $usuario->name }}</span></td>
                                     <td>{{ $usuario->email }}</td>
                                     <td>{{ $usuario->created_at ? $usuario->created_at->format('d/m/Y') : 'N/A' }}</td>
                                     <td class="text-center">
                                         <div class="d-flex justify-content-center gap-2">
-                                            <a href="{{ route('usuarios.edit', $usuario->id) }}" class="btn btn-outline-info btn-sm" title="Editar">
+                                            <a href="{{ route('usuarios.edit', $usuario->id) }}" class="btn btn-sm" style="background:rgba(217, 140, 82, 1); color:rgba(18, 33, 61, 1);" title="Editar">
                                                 <i class="fas fa-edit"></i>
                                             </a>
                                             <form action="{{ route('usuarios.destroy', $usuario->id) }}" method="POST" onsubmit="return confirm('¿Estás seguro de que deseas eliminar este usuario?')">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type="submit" class="btn btn-outline-danger btn-sm" title="Eliminar" {{ auth()->id() == $usuario->id ? 'disabled' : '' }}>
+                                                <button type="submit" class="btn btn-sm" style="background:rgba(18, 33, 61, 1); color:rgba(246, 253, 254, 1);" title="Eliminar" {{ auth()->id() == $usuario->id ? 'disabled' : '' }}>
                                                     <i class="fas fa-trash"></i>
                                                 </button>
                                             </form>

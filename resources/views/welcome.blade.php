@@ -33,7 +33,7 @@
         background-size: cover;
         background-position: center;
         height: 70vh;
-        color: white;
+        color: rgba(246, 253, 254, 1);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -50,9 +50,9 @@
           text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
       }
       .btn-hero-cta {
-          background-color: #c28e00;
-          border-color: #c28e00;
-          color: #fff;
+          background-color: rgba(217, 140, 82, 1);
+          border-color: rgba(217, 140, 82, 1);
+          color: rgba(246, 253, 254, 1);
           font-weight: 600;
           border-radius: 50px;
           padding: 12px 30px;
@@ -62,11 +62,11 @@
           box-shadow: 0 5px 15px rgba(0,0,0,0.3);
       }
       .btn-hero-cta:hover {
-          background-color: #a07400;
-          border-color: #a07400;
+          background-color: rgba(197, 120, 62, 1);
+          border-color: rgba(197, 120, 62, 1);
           transform: translateY(-3px);
           box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-          color: #fff;
+          color: rgba(246, 253, 254, 1);
       }
       .section-title {
         font-size: 2.5rem;
@@ -78,8 +78,8 @@
     border-radius: 10%; 
 }
 footer {
-    background: linear-gradient(90deg, rgb(15, 46, 27), rgb(20, 65, 38), rgb(18, 56, 32));
-    color: #fff;
+    background: linear-gradient(90deg, rgba(18, 33, 61, 1), rgba(28, 43, 71, 1), rgba(18, 33, 61, 1));
+    color: rgba(246, 253, 254, 1);
     padding: 20px 0 0 0; /* Menos padding arriba */
     text-align: center;
     font-family: 'Segoe UI', Arial, sans-serif;
@@ -104,21 +104,21 @@ footer {
     font-size: 1.08rem;
     font-weight: 700;
     margin-bottom: 8px;
-    color: #c28e00;
+    color: rgba(217, 140, 82, 1);
     letter-spacing: 0.03em;
 }
 .footer-section p,
 .footer-section a {
     font-size: 0.98rem;
     margin-bottom: 5px;
-    color: #fff;
+    color: rgba(246, 253, 254, 1);
     text-decoration: none;
     transition: color 0.2s;
     display: block;
     word-break: break-word;
 }
 .footer-section a:hover {
-    color: #c28e00;
+    color: rgba(217, 140, 82, 1);
     text-decoration: none;
 }
 .footer-bottom {
@@ -175,17 +175,17 @@ footer {
     margin-right: 60px
     
 }
-.title2{
+.title2 {
     font-size: 40px;
     font-weight: 400;
     text-transform: uppercase;
-    color: rgb(23, 97, 63);
+    color: rgba(18, 33, 61, 1);
     text-align: center;
 }
 .text-success{
 
     --bs-text-opacity: 1;
-    color: rgb(23 97 63) !important;
+    color: rgba(18, 33, 61, 1) !important;
 }
 
 .py-5{
@@ -241,8 +241,8 @@ footer {
     bottom: 40px;
     right: 40px;
     z-index: 999;
-    background: linear-gradient(90deg, rgb(15, 46, 27), rgb(20, 65, 38), rgb(18, 56, 32));
-    color: #fff;
+    background: linear-gradient(90deg, rgba(18, 33, 61, 1), rgba(28, 43, 71, 1), rgba(18, 33, 61, 1));
+    color: rgba(246, 253, 254, 1);
     border: none;
     border-radius: 100px;
     padding: 14px 28px;
@@ -254,10 +254,10 @@ footer {
     display: none;
 }
 #btn-ir-arriba:hover {
-    background: #c28e00;
-    color: #fff;
+    background: rgba(217, 140, 82, 1);
+    color: rgba(246, 253, 254, 1);
     transform: translateY(-4px) scale(1.05);
-    box-shadow: 0 8px 24px rgba(23,97,63,0.25);
+    box-shadow: 0 8px 24px rgba(18, 33, 61, 0.25);
 }
 @media (max-width: 600px) {
     #btn-ir-arriba {
@@ -308,9 +308,9 @@ footer {
 }
 
     .btn-hero-cta {
-        background-color: #c28e00;
-        border-color: #c28e00;
-        color: #fff;
+        background-color: rgba(217, 140, 82, 1);
+        border-color: rgba(217, 140, 82, 1);
+        color: rgba(246, 253, 254, 1);
         font-weight: 600;
         border-radius: 50px;
         padding: 10px 25px;
@@ -323,11 +323,11 @@ footer {
         text-decoration: none;
     }
     .btn-hero-cta:hover {
-        background-color: #a07400;
-        border-color: #a07400;
+        background-color: rgba(197, 120, 62, 1);
+        border-color: rgba(197, 120, 62, 1);
         transform: translateY(-2px);
         box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-        color: #fff;
+        color: rgba(246, 253, 254, 1);
     }
     .animate__fadeInUp {
   animation-name: fadeInUp;
@@ -524,7 +524,7 @@ footer {
                     </div>
 
                     <div class="d-grid">
-                        <button type="submit" class="btn btn-success" id="btnSubmitFoto">
+                        <button type="submit" class="btn" id="btnSubmitFoto" style="background: rgba(217, 140, 82, 1); color: rgba(246, 253, 254, 1);">
                             <i class="fas fa-paper-plane me-2"></i> Enviar Pedido
                         </button>
                     </div>
@@ -572,7 +572,7 @@ footer {
                             icon: 'success',
                             title: '¡Pedido Enviado!',
                             text: 'Hemos recibido tu pedido con foto. Te contactaremos pronto.',
-                            confirmButtonColor: '#15401b'
+                            confirmButtonColor: 'rgba(18, 33, 61, 1)'
                         });
                         this.reset();
                         document.getElementById('preview').classList.add('d-none');

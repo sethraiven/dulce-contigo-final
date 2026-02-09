@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <h2 class="fw-bold mb-4 text-center" style="color:#15401b;">Lista de Categorías</h2>
+    <h2 class="fw-bold mb-4 text-center" style="color:rgba(18, 33, 61, 1);">Lista de Categorías</h2>
 
     @if(session('success') || session('error'))
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -13,7 +13,7 @@
                         icon: 'success',
                         title: '¡Éxito!',
                         text: '{{ session('success') }}',
-                        confirmButtonColor: '#15401b'
+                        confirmButtonColor: 'rgba(18, 33, 61, 1)'
                     });
                 @endif
                 @if(session('error'))
@@ -21,7 +21,7 @@
                         icon: 'error',
                         title: '¡Error!',
                         text: '{{ session('error') }}',
-                        confirmButtonColor: '#c28e00'
+                        confirmButtonColor: 'rgba(217, 140, 82, 1)'
                     });
                 @endif
             });
@@ -43,16 +43,16 @@
         #categorias-table {
             background: #fff;
             border-radius: 16px;
-            box-shadow: 0 4px 16px rgba(21, 64, 27, 0.10);
+            box-shadow: 0 4px 16px rgba(18, 33, 61, 0.10);
             overflow: hidden;
             font-size: 1rem;
         }
         #categorias-table th {
-            background: #15401b;
-            color: #fff;
+            background: rgba(18, 33, 61, 1);
+            color: rgba(246, 253, 254, 1);
             text-align: center;
             font-weight: 700;
-            border-bottom: 2px solid #c28e00;
+            border-bottom: 2px solid rgba(217, 140, 82, 1);
             vertical-align: middle;
         }
         #categorias-table td {
@@ -66,8 +66,8 @@
             transition: background 0.2s;
         }
         .btn-warning.btn-sm {
-            background: #c28e00;
-            color: #15401b;
+            background: rgba(217, 140, 82, 1);
+            color: rgba(18, 33, 61, 1);
             border: none;
             border-radius: 6px;
             font-weight: 600;
@@ -75,12 +75,12 @@
             font-size: 1rem;
         }
         .btn-warning.btn-sm:hover {
-            background: #15401b;
-            color: #fff;
+            background: rgba(18, 33, 61, 1);
+            color: rgba(246, 253, 254, 1);
         }
         .btn-danger.btn-sm {
-            background: #15401b;
-            color: #fff;
+            background: rgba(18, 33, 61, 1);
+            color: rgba(246, 253, 254, 1);
             border: none;
             border-radius: 6px;
             font-weight: 600;
@@ -88,8 +88,8 @@
             font-size: 1rem;
         }
         .btn-danger.btn-sm:hover {
-            background: #c28e00;
-            color: #15401b;
+            background: rgba(217, 140, 82, 1);
+            color: rgba(18, 33, 61, 1);
         }
         #crearCategoriaModal .modal-content {
             border-radius: 16px;
@@ -97,8 +97,8 @@
             border: 1px solid #e0e0e0;
         }
         #crearCategoriaModal .modal-header {
-            background: #15401b;
-            color: #fff;
+            background: rgba(18, 33, 61, 1);
+            color: rgba(246, 253, 254, 1);
             border-radius: 16px 16px 0 0;
             font-weight: bold;
             text-align: center;
@@ -109,24 +109,24 @@
             letter-spacing: 1px;
         }
         #crearCategoriaModal .btn-primary {
-            background: #15401b;
+            background: rgba(18, 33, 61, 1);
             border: none;
             font-weight: 600;
             border-radius: 8px;
         }
         #crearCategoriaModal .btn-primary:hover {
-            background: #c28e00;
-            color: #fff;
+            background: rgba(217, 140, 82, 1);
+            color: rgba(246, 253, 254, 1);
         }
         #crearCategoriaModal .btn-secondary {
             border-radius: 8px;
         }
         #crearCategoriaModal .form-label {
-            color: #15401b;
+            color: rgba(18, 33, 61, 1);
             font-weight: 600;
         }
         #crearCategoriaModal .form-control:focus {
-            border-color: #15401b;
+            border-color: rgba(18, 33, 61, 1);
             box-shadow: none;
         }
         #crearCategoriaModal .form-control {
@@ -149,7 +149,7 @@
             <tbody>
                 @foreach($categorias as $categoria)
                 <tr>
-                    <td class="fw-semibold" style="color:#15401b;">{{ $categoria->nombre }}</td>
+                    <td class="fw-semibold" style="color:rgba(18, 33, 61, 1);">{{ $categoria->nombre }}</td>
                     <td>{{ $categoria->descripcion }}</td>
                     @auth
                     <td>
@@ -217,8 +217,8 @@
         border: 1px solid #e0e0e0;
     }
     #editarCategoriaModal .modal-header {
-        background: #15401b;
-        color: #fff;
+        background: rgba(18, 33, 61, 1);
+        color: rgba(246, 253, 254, 1);
         border-radius: 16px 16px 0 0;
         font-weight: bold;
         text-align: center;
@@ -229,24 +229,24 @@
         letter-spacing: 1px;
     }
     #editarCategoriaModal .btn-primary {
-        background: #15401b;
+        background: rgba(18, 33, 61, 1);
         border: none;
         font-weight: 600;
         border-radius: 8px;
     }
     #editarCategoriaModal .btn-primary:hover {
-        background: #c28e00;
-        color: #fff;
+        background: rgba(217, 140, 82, 1);
+        color: rgba(246, 253, 254, 1);
     }
     #editarCategoriaModal .btn-secondary {
         border-radius: 8px;
     }
     #editarCategoriaModal .form-label {
-        color: #15401b;
+        color: rgba(18, 33, 61, 1);
         font-weight: 600;
     }
     #editarCategoriaModal .form-control:focus {
-        border-color: #15401b;
+        border-color: rgba(18, 33, 61, 1);
         box-shadow: none;
     }
     #editarCategoriaModal .form-control {

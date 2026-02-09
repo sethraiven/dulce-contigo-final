@@ -2,13 +2,13 @@
 <div class="container">
     <!-- Encabezado con título y contador de pedidos de hoy -->
     <div class="d-flex justify-content-between align-items-center mb-4">
-        <h2 class="fw-bold" style="color:#15401b;">Pedidos pendientes</h2>
+        <h2 class="fw-bold" style="color:rgba(18, 33, 61, 1);">Pedidos pendientes</h2>
         <div class="d-flex align-items-center">
-            <span class="badge" style="background-color:#c28e00; color:#fff; font-size:1.1rem; padding:10px 18px;">
+            <span class="badge" style="background-color:rgba(217, 140, 82, 1); color:rgba(246, 253, 254, 1); font-size:1.1rem; padding:10px 18px;">
                 Pedidos pendientes: <?php echo e($totalPedidosHoy ?? 0); ?>
 
             </span>
-            <button type="button" class="btn ms-2 p-0" style="background:#c09624; color:#15401b; border-radius:50%; width:46px; height:46px; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 12px rgba(194,142,0,0.13); border:2px solid #c28e00;" disabled>
+            <button type="button" class="btn ms-2 p-0" style="background:rgba(197, 120, 62, 1); color:rgba(18, 33, 61, 1); border-radius:50%; width:46px; height:46px; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 12px rgba(217, 140, 82, 0.13); border:2px solid rgba(217, 140, 82, 1);" disabled>
                 <i class="bi bi-cart-fill" style="font-size:1.7rem;"></i>
             </button>
         </div>
@@ -24,16 +24,16 @@
         #pedidos-table {
             background: #fff;
             border-radius: 16px;
-            box-shadow: 0 4px 16px rgba(21, 64, 27, 0.10);
+            box-shadow: 0 4px 16px rgba(18, 33, 61, 0.10);
             overflow: hidden;
             font-size: 1rem;
         }
         #pedidos-table th {
-            background: #15401b;
-            color: #fff;
+            background: rgba(18, 33, 61, 1);
+            color: rgba(246, 253, 254, 1);
             text-align: center;
             font-weight: 700;
-            border-bottom: 2px solid #c28e00;
+            border-bottom: 2px solid rgba(217, 140, 82, 1);
             vertical-align: middle;
         }
         #pedidos-table td {
@@ -48,8 +48,8 @@
         }
         /* Estilo para el botón de confirmar pedido */
         .btn-success.btn-sm {
-            background: #15401b;
-            color: #fff;
+            background: rgba(18, 33, 61, 1);
+            color: rgba(246, 253, 254, 1);
             border: none;
             border-radius: 6px;
             font-weight: 600;
@@ -57,8 +57,8 @@
             font-size: 1rem;
         }
         .btn-success.btn-sm:hover {
-            background: #c28e00;
-            color: #15401b;
+            background: rgba(217, 140, 82, 1);
+            color: rgba(18, 33, 61, 1);
         }
     </style>
     <div class="table-responsive">
@@ -102,12 +102,12 @@
                         $numeroPedido = $pedido->created_at->format('ymd') . '-' . str_pad($contadorPorDia[$fechaClave], 3, '0', STR_PAD_LEFT);
                     ?>
                     <tr id="pedido-<?php echo e($pedido->id); ?>">
-                        <td class="fw-bold" style="color:#15401b;"><?php echo e($numeroPedido); ?></td>
+                        <td class="fw-bold" style="color:rgba(18, 33, 61, 1);"><?php echo e($numeroPedido); ?></td>
                         <td><?php echo e($pedido->nombre); ?></td>
                         <td><?php echo e($pedido->telefono); ?></td>
                         <td>
                             <!-- Mostrar método de pago como badge -->
-                            <span class="badge" style="background:#15401b; color:#fff;"><?php echo e($pedido->metodo_pago); ?></span>
+                            <span class="badge" style="background:rgba(18, 33, 61, 1); color:rgba(246, 253, 254, 1);"><?php echo e($pedido->metodo_pago); ?></span>
                         </td>
                         <td><?php echo e($pedido->comentarios); ?></td>
                         <td>
@@ -125,7 +125,7 @@
                                 <ul class="mb-0 ps-3" style="font-size: 0.97rem;">
                                     <?php $__currentLoopData = $productos; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $producto): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                         <li>
-                                            <span class="fw-semibold" style="color:#15401b;"><?php echo e($producto['nombre']); ?></span>
+                                            <span class="fw-semibold" style="color:rgba(18, 33, 61, 1);"><?php echo e($producto['nombre']); ?></span>
                                             x<?php echo e($producto['cantidad']); ?>
 
                                             <span class="text-muted">($<?php echo e(number_format($producto['precio'], 2)); ?> c/u)</span>

@@ -11,7 +11,7 @@
     .producto-card {
         background: #fff;
         border-radius: 16px;
-        box-shadow: 0 4px 16px rgba(21, 64, 27, 0.10);
+        box-shadow: 0 4px 16px rgba(18, 33, 61, 0.10);
         border: 1px solid #e0e0e0;
         padding: 18px 14px 16px 14px;
         width: 220px;
@@ -22,8 +22,8 @@
     }
     .producto-card:hover {
         transform: translateY(-6px) scale(1.03);
-        box-shadow: 0 8px 32px rgba(21, 64, 27, 0.18);
-        border-color: #c28e00;
+        box-shadow: 0 8px 32px rgba(18, 33, 61, 0.18);
+        border-color: rgba(217, 140, 82, 1);
     }
     .producto-card img {
         width: 120px;
@@ -31,14 +31,14 @@
         object-fit: cover;
         border-radius: 12px;
         margin-bottom: 12px;
-        border: 1.5px solid #c28e00;
+        border: 1.5px solid rgba(217, 140, 82, 1);
         background: #f6f6f6;
     }
     .producto-card h5 {
         font-size: 1.08rem;
         font-weight: 700;
         margin-bottom: 6px;
-        color: #15401b;
+        color: rgba(18, 33, 61, 1);
         text-align: center;
     }
     .producto-card p {
@@ -48,8 +48,8 @@
         text-align: center;
     }
     .producto-card .btn {
-        background: #15401b;
-        color: #fff;
+        background: rgba(18, 33, 61, 1);
+        color: rgba(246, 253, 254, 1);
         border: none;
         border-radius: 8px;
         font-weight: 600;
@@ -58,12 +58,12 @@
         margin: 0 4px;
     }
     .producto-card .btn:hover {
-        background: #c28e00;
-        color: #15401b;
+        background: rgba(217, 140, 82, 1);
+        color: rgba(18, 33, 61, 1);
     }
     .producto-card .btn-carrito {
-        background: #c28e00;
-        color: #15401b;
+        background: rgba(217, 140, 82, 1);
+        color: rgba(18, 33, 61, 1);
         border: none;
         border-radius: 8px;
         padding: 6px 14px;
@@ -75,8 +75,8 @@
         transition: background 0.2s, color 0.2s;
     }
     .producto-card .btn-carrito:hover {
-        background: #15401b;
-        color: #fff;
+        background: rgba(18, 33, 61, 1);
+        color: rgba(246, 253, 254, 1);
     }
     .producto-card .btns-group {
         display: flex;
@@ -87,7 +87,7 @@
     }
 </style>
 <div class="container">
-    <h2 style="text-align: center; color:#15401b; margin-top: 18px;">
+    <h2 style="text-align: center; color:rgba(18, 33, 61, 1); margin-top: 18px;">
          {{ $categoria->nombre }}
     </h2>
     <a href="{{ url('/') }}" class="btn btn-outline-dark">Volver al catálogo</a>
@@ -131,20 +131,20 @@
 <div class="modal fade" id="modalProducto" tabindex="-1" aria-labelledby="modalProductoLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content" style="border-radius: 16px;">
-      <div class="modal-header" style="background:#15401b;;">
-        <h5 class="modal-title" id="modalProductoLabel" style="color:white;"></h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      <div class="modal-header" style="background:rgba(18, 33, 61, 1);">
+        <h5 class="modal-title" id="modalProductoLabel" style="color:rgba(246, 253, 254, 1);"></h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
       <div class="modal-body d-flex flex-column align-items-center">
-        <img id="modalProductoImagen" src="" alt="Imagen producto" style="width:140px; height:140px; border-radius:12px; border:2px solid #c28e00; margin-bottom:14px;">
-        <p id="modalProductoCategoria" style="color:#c28e00; font-weight:600; margin-bottom:6px;"></p>
+        <img id="modalProductoImagen" src="" alt="Imagen producto" style="width:140px; height:140px; border-radius:12px; border:2px solid rgba(217, 140, 82, 1); margin-bottom:14px;">
+        <p id="modalProductoCategoria" style="color:rgba(217, 140, 82, 1); font-weight:600; margin-bottom:6px;"></p>
         <p id="modalProductoDescripcion" style="color:#222; text-align:center;"></p>
         <p id="modalProductoDetalles" style="color:#555; text-align:center; font-size:0.98rem;"></p>
-        <p class="fw-bold" style="color:#15401b; font-size:1.2rem;">Precio: $<span id="modalProductoPrecio"></span></p>
+        <p class="fw-bold" style="color:rgba(18, 33, 61, 1); font-size:1.2rem;">Precio: $<span id="modalProductoPrecio"></span></p>
         <p id="modalProductoStock" style="color:#888; font-size:0.95rem;"></p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-carrito-modal" style="background:#c28e00; color:#15401b; border-radius:8px;">
+        <button type="button" class="btn btn-carrito-modal" style="background:rgba(217, 140, 82, 1); color:rgba(18, 33, 61, 1); border-radius:8px;">
             <i class="fas fa-shopping-cart"></i> Agregar al carrito
         </button>
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
