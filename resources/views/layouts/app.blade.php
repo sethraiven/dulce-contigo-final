@@ -501,10 +501,26 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link {{ request()->is('register*') ? 'active' : '' }}" href="{{ route('register') }}">
-                                <i class="fas fa-user-plus"></i> Registrar usuario
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle{{ request()->is('usuarios*') || request()->is('register*') ? ' active' : '' }}"
+                                href="#" id="navbarDropdownUsuarios" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fas fa-users-cog"></i> Usuarios
                             </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownUsuarios">
+                                <li>
+                                    <a class="dropdown-item{{ request()->is('usuarios') ? ' active' : '' }}"
+                                        href="{{ route('usuarios.index') }}">
+                                        <i class="fas fa-list-ul"></i> Ver Usuarios
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item{{ request()->is('register*') ? ' active' : '' }}"
+                                        href="{{ route('register') }}">
+                                        <i class="fas fa-user-plus"></i> Registrar Usuario
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#"

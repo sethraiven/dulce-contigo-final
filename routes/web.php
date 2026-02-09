@@ -7,6 +7,7 @@ use App\Models\Categoria;
 use App\Http\Controllers\PerfilController;
 use App\Http\Controllers\PedidoController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
    $categorias = Categoria::all();
@@ -45,3 +46,5 @@ Route::get('register', [RegisterController::class, 'showRegistrationForm'])
 
 Route::post('register', [RegisterController::class, 'register'])
     ->middleware('auth');
+
+Route::resource('usuarios', UserController::class)->middleware('auth');
