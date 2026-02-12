@@ -322,6 +322,8 @@
                             <td>{{ $producto->stock }}</td>
                             <td>{{ $producto->categoria->nombre ?? 'sin categoria' }}</td>
                             <td>
+
+                            <!-- mostrar la imagen del producto -->
                                 @if ($producto->imagen)
                                     <img src="{{ asset('storage/' . $producto->imagen) }}" width="80"
                                         alt="imagen del producto">

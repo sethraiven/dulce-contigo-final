@@ -14,6 +14,7 @@ Route::get('/', function () {
    return view('welcome', compact('categorias'));
 });
 
+Route::get('/buscar', [ProductoController::class, 'buscar'])->name('productos.buscar');
 Route::resource('productos', ProductoController::class);
 Route::get('/productos/create', [ProductoController::class, 'create'])->name('productos.create');
 Route::post('/productos/importar-excel', [ProductoController::class, 'importarExcel'])->name('productos.importar-excel');

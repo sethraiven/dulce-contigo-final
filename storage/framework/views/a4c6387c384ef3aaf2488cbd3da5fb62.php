@@ -342,9 +342,20 @@ footer {
     <div class="container mt-4">
           <h2 class="section-title text-center mb-2 mt-2 text-success">Te acompañamos en tus ideas y construcciones</h2>
           
+          <div class="row justify-content-center mb-4">
+              <div class="col-md-8 col-lg-6">
+                  <form action="<?php echo e(route('productos.buscar')); ?>" method="GET" class="d-flex shadow-lg" style="border-radius: 50px; overflow: hidden; border: 2px solid rgba(217, 140, 82, 0.5); background: white;">
+                      <input type="text" name="query" class="form-control border-0 px-4 py-3" placeholder="¿Qué estás buscando hoy? (ej. taladro, pintura, etc.)" required style="font-size: 1.1rem; border-radius: 0; box-shadow: none; ">
+                      <button type="submit" class="btn border-0 px-4" style="background: rgba(18, 33, 61, 1); color: white; border-radius: 0; transition: all 0.3s;">
+                          <i class="fas fa-search me-2"></i> Buscar
+                      </button>
+                  </form>
+              </div>
+          </div>
+          
           <div class="text-center mb-4">
               <a href="#pedido-express" class="btn btn-hero-cta animate__animated animate__fadeInUp">
-                  <i class="fas fa-camera me-2"></i> Hacer Pedido con Foto
+                  <i class="fas fa-camera me-2"></i> Hacer Pedido con Foto aca
               </a>
           </div>
 
@@ -451,7 +462,7 @@ footer {
     <div class="row align-items-center">
       <!-- Imagen decorativa -->
       <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-right">
-        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/9b/f9/18/nuestra-tierra-antioquena.jpg?w=800&h=-1&s=1" 
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd-uq7GhtqB6gliUcr0ELIw4z_38DlGFf9cA&s" 
              alt="Pasteles caseros" class="img-fluid rounded shadow-lg">
       </div>
       
@@ -641,7 +652,7 @@ footer {
         <div class="footer-section">
             <h3>Contacto</h3>
             <p><i class="fa fa-envelope"></i> ferrycoloresrh@gmail.com </p>
-            <a href="https://api.whatsapp.com/send?phone=573246283231&text=Hola%20%F0%9F%91%8B%20Miguelucho" target="_blank"><i class="fab fa-whatsapp"></i> whatsapp 3104393143</a>
+            <a href="https://api.whatsapp.com/send?phone=573104393143&text=Hola%20%F0%9F%91%8B%20Ferrycolores RH" target="_blank"><i class="fab fa-whatsapp"></i> whatsapp 3104393143</a>
         </div>
         
         <div class="footer-section">

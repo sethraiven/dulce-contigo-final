@@ -10,7 +10,7 @@ class ProductoController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth')->except(['show']);
+        $this->middleware('auth')->except(['show', 'buscar']);
     }
     
      public function index()
@@ -258,5 +258,18 @@ class ProductoController extends Controller
             $errores[] = "Fila $numeroFila: " . $e->getMessage();
             return null;
         }
+    }
+    public function buscar(Request $request)
+    {
+        $query = $request->input('query');
+        
+        $productos = Producto::with('categoria')
+            ->where('nombre', 'LIKE', "%{$query}%")
+            ->orWhere('descripcion', 'LIKE', "%{$query}%")
+            ->get();
+            
+        $categorias = Categoria::all();
+        
+        return view('productos.resultados', compact('productos', 'query', 'categorias'));
     }
 }

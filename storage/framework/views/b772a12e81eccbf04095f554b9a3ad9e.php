@@ -320,6 +320,8 @@
                             <td><?php echo e($producto->stock); ?></td>
                             <td><?php echo e($producto->categoria->nombre ?? 'sin categoria'); ?></td>
                             <td>
+
+                            <!-- mostrar la imagen del producto -->
                                 <?php if($producto->imagen): ?>
                                     <img src="<?php echo e(asset('storage/' . $producto->imagen)); ?>" width="80"
                                         alt="imagen del producto">
