@@ -365,40 +365,57 @@ footer {
 
     <div id="categoriasCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-          @php
-                $imagenes = [
-                    'Postres' => 'https://0701.static.prezi.com/preview/v2/otksijunl3nhsozxhpzd4w3jnx6jc3sachvcdoaizecfr3dnitcq_3_0.png',
-                    'Conservas' => 'https://www.farmaceuticosdesevilla.es/consejossaludables/wp-content/uploads/sites/3/2022/03/1450119467-fotolia_70795211_subscription_xxl.jpg',
-                    
-                    // Imágenes de hardware/ferretería
-                    'otros' => 'https://images.unsplash.com/photo-1540822606822-261564aa712a?w=1200&h=600&fit=crop',
-                    'Otros' => 'https://images.unsplash.com/photo-1540822606822-261564aa712a?w=1200&h=600&fit=crop',
-                    
-                    'ferretería' => 'https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?w=1200&h=600&fit=crop',
-                    'Ferretería' => 'https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?w=1200&h=600&fit=crop',
+@php
+    $promociones = [
+        ['imagen' => asset('imagenes/foto.jpeg'),
+            'titulo' => 'Ven para tener el gusto de atenderte',
+            'subtitulo' => 'Apoyamos cada construcción porque sabemos que cada obra cuenta una historia',
+            'link' => '#pedido-express'
+        ],
+         ['imagen' => asset('imagenes/foto2.jpeg'),
+            'titulo' => 'Tu Proyecto es Nuestra Pasión',
+            'subtitulo' => 'Apoyamos cada construcción porque sabemos que cada obra cuenta una historia',
+            'link' => '#pedido-express'
+        ],
+        [
+            'imagen' => asset('imagenes/Captura de pantalla 2026-03-03 125917.png'),
+            'titulo' => 'Más que una Ferretería',
+            'subtitulo' => 'Somos aliados en cada proyecto y reto que enfrentas',
+            'link' => '#contacto'
+        ],
+        [
+            'imagen' => asset('imagenes/Captura de pantalla 2026-03-03 125847.png'),
+            'titulo' => 'Tu Proyecto es Nuestra Pasión',
+            'subtitulo' => 'Apoyamos cada construcción porque sabemos que cada obra cuenta una historia',
+            'link' => '#pedido-express'
+        ],
+        [
+            'imagen' => asset('imagenes/Captura de pantalla 2026-03-03 125942.png'),
+            'titulo' => '¡Síguenos para Más Novedades!',
+            'subtitulo' => 'Visítanos en El Retiro o contáctanos por WhatsApp',
+            'link' => '#contacto'
+        ],
+        
+    ];
+@endphp
 
-                    'Material de playa' => 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=1200&h=600&fit=crop',
-                    'material de playa' => 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=1200&h=600&fit=crop',
-                ];
-            @endphp
+@foreach ($promociones as $index => $promo)
+    <div class="carousel-item @if($index == 0) active @endif">
+        <div class="d-flex justify-content-center align-items-center flex-column py-3" style="min-height: 350px;">
+            <div class="carousel-img-container shadow mb-3" style="width: 100%; max-width: 700px; border-radius: 15px; overflow: hidden; background: #0b1a33;">
+                <img src="{{ $promo['imagen'] }}" class="img-fluid w-100" alt="{{ $promo['titulo'] }}"
+                style="height: auto; max-height: 400px; object-fit: cover; display: block;">
+            </div>
 
+            <h4 class="fw-bold text-success mb-1 text-center">{{ $promo['titulo'] }}</h4>
+            <p class="text-muted text-center px-3 mb-2 small">{{ $promo['subtitulo'] }}</p>
 
-
-            @foreach ($categorias as $index => $categoria)
-                <div class="carousel-item @if($index == 0) active @endif">
-                    <div class="d-flex justify-content-center align-items-center flex-column" style="height: 500px;">
-
-                        <img src="{{ $imagenes[$categoria->nombre] ?? 'https://via.placeholder.com' }}" class="" alt="{{ $categoria->nombre }}"
-                        style="height: 400px; width:960px">
-
-                        <h5 class="mt-3">{{ $categoria->descripcion }}</h5>
-
-                        <a href="{{ route('categorias.producto', $categoria->id) }}" class="btn btn-outline-dark">
-                            {{ $categoria->nombre }}
-                        </a>
-                    </div>
-                </div>
-            @endforeach
+            <a href="{{ $promo['link'] }}" class="btn btn-success btn-sm rounded-pill px-4 py-1 fw-bold shadow-sm">
+                Saber más
+            </a>
+        </div>
+    </div>
+@endforeach
 
         </div>
 
