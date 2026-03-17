@@ -488,13 +488,15 @@ footer {
       <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
         <h2 class="fw-bold mb-3 text-success">Nuestra Historia</h2>
         <p class="lead" style="font-size: 1.1rem;">
-          xxxx <strong>xx xxx</strong>, xxxxxxxxxxxxxxxxx
+
+          En <strong>Ferrycolores RH</strong>, nacimos con la visión de ser el aliado estratégico en cada proyecto de construcción y remodelación, ofreciendo herramientas de alta gama y un servicio excepcional que marca la diferencia.
+
         </p>
         <p class="lead" style="font-size: 1.1rem;">
-          xxxxx <strong>xxxx</strong>, xxxxx
+          Desde nuestros inicios, nos hemos dedicado a ofrecer productos de alta calidad y un servicio confiable, construyendo relaciones duraderas con cada cliente que confía en nosotros para hacer realidad sus proyectos.
         </p>
         <blockquote class="blockquote mt-4 text-muted" data-aos="fade-up" data-aos-delay="400">
-          <p>“Listo servir dia a dia dia a dia.”</p>
+          <p>“Listo servir dia a dia dia a dia.”</p><p>Ferrycolores RH.</p>
         </blockquote>
       </div>
     </div>

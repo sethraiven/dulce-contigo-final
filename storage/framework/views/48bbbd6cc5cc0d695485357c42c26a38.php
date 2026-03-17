@@ -568,16 +568,18 @@
                 </div>
                 <div class="col-lg-4 col-md-12 footer-section">
                     <h5><i class="fas fa-contact-book"></i> Contacto</h5>
-                    <p><i class="fas fa-map-marker-alt"></i> Colombia</p>
-                    <p><i class="fas fa-envelope"></i> info@ferrycoloresrh.com</p>
-                    <p><i class="fas fa-phone"></i> +57 (123) 456-7890</p>
+                    <p><i class="fas fa-map-marker-alt"></i>El Retiro, Antioquia, Colombia</p>
+                    <p><i class="fas fa-envelope"></i> ferrycoloresrh@gmail.con</p>
+                     <a href="https://api.whatsapp.com/send?phone=573104393143&text=Hola%20%F0%9F%91%8B%20Ferrycolores RH" target="_blank"><i class="fab fa-whatsapp"></i> whatsapp 3104393143</a>
                     <p><i class="fas fa-clock"></i> Lun - Vie: 8:00 AM - 6:00 PM</p>
+                    <p><i class="fas fa-clock"></i> Sab: 8:00 AM - 12:30 PM</p>
                 </div>
             </div>
-            <div class="footer-bottom">
+            
+        </div>
+        <div class="footer-bottom">
                 <p><i class="fas fa-copyright"></i> <?php echo e(date('Y')); ?> FERRYCOLORES RH. Todos los derechos reservados.</p>
             </div>
-        </div>
     </footer>
 
     <script>
